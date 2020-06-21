@@ -26,4 +26,5 @@ public class MaximumTest {
         Integer result = maximum.maximumValue(30, 40, 50);
         Assert.assertEquals((Integer) 50, result);
     }
+
 }
