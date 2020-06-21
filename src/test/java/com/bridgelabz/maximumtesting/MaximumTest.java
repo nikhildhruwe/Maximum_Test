@@ -27,4 +27,17 @@ public class MaximumTest {
         Assert.assertEquals((Integer) 50, result);
     }
 
+    @Test
+    public void givenMaximumFloatNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
+        Maximum maximum = new Maximum();
+        Float result= maximum.maximumValue(3.3f,2.2f,1.1f);
+        Assert.assertEquals((Float) 3.3f,result);
+    }
+
+    @Test
+    public void givenMaximumFloatNumber_WhenAtSecondPosition_ShouldReturnSameNumber() {
+        Maximum maximum = new Maximum();
+        Float result= maximum.maximumValue(3.3f,20.6f,1.1f);
+        Assert.assertEquals((Float) 20.6f,result);
+    }
 }
