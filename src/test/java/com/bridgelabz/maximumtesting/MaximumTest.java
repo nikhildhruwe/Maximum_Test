@@ -9,7 +9,7 @@ public class MaximumTest {
     @Test
     public void givenMaximumNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
         Maximum maximum = new Maximum();
-        int result = maximum.maximumValue(30, 20, 10);
+        int result = maximum.maximumValue(30,20,10);
         Assert.assertEquals(30, result);
     }
 
@@ -67,4 +67,6 @@ public class MaximumTest {
         String result=maximum.maximumValue("BIKE","CAR","PLANE");
         Assert.assertEquals("PLANE",result);
     }
+
+
 }
