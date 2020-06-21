@@ -1,27 +1,26 @@
 package com.bridgelabz.maximum.utility;
 
-public class Maximum <T extends Comparable >{
+import java.util.Arrays;
 
-    private T firstMember;
-    private T secondMember;
-    private T thirdMember;
+public class Maximum <T extends Comparable > {
 
-    public Maximum(T firstMember, T secondMember, T thirdMember) {
-        this.firstMember=firstMember;
-        this.secondMember=secondMember;
-        this.thirdMember=thirdMember;
+    private T[] arguments;
+    T[] array;
+
+    public Maximum(T... arguments) {
+        this.arguments = arguments;
     }
 
     public T maximumValue() {
-        return   Maximum.maximumValue(firstMember,secondMember,thirdMember);
+        return Maximum.maximumValue(arguments);
     }
 
-    public static <T extends Comparable> T maximumValue(T firstMember, T secondMember, T thirdMember) {
-        T maxValue=firstMember;
-        if (secondMember.compareTo(maxValue)>0)
-            maxValue=secondMember;
-        if (thirdMember.compareTo(maxValue)>=0)
-            maxValue=thirdMember;
+    public static <T extends Comparable> T maximumValue(T... arguments) {
+        T maxValue;
+        int length;
+        Arrays.sort(arguments);
+        length = arguments.length;
+        maxValue = arguments[length - 1];
         return maxValue;
     }
 }
