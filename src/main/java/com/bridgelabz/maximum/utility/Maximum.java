@@ -1,4 +1,4 @@
-package com.bridgelabz.maximum.utility.Maximum;
+package com.bridgelabz.maximum.utility;
 
 public class Maximum <T extends Comparable >{
 
@@ -13,7 +13,7 @@ public class Maximum <T extends Comparable >{
     }
 
     public T maximumValue() {
-      return   Maximum.maximumValue(firstMember,secondMember,thirdMember);
+        return   Maximum.maximumValue(firstMember,secondMember,thirdMember);
     }
 
     public static <T extends Comparable> T maximumValue(T firstMember, T secondMember, T thirdMember) {
@@ -24,5 +24,4 @@ public class Maximum <T extends Comparable >{
             maxValue=thirdMember;
         return maxValue;
     }
-
 }
