@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class Maximum<T extends Comparable> {
 
-    private T[] arguments;
+    private final T[] arguments;
 
+    @SafeVarargs
     public Maximum(T... arguments) {
         this.arguments = arguments;
     }
@@ -14,6 +15,7 @@ public class Maximum<T extends Comparable> {
         return Maximum.maximumValue(arguments);
     }
 
+    @SafeVarargs
     public static <T extends Comparable> T maximumValue(T... arguments) {
         T maxValue;
         Arrays.sort(arguments);
