@@ -40,11 +40,31 @@ public class MaximumTest {
         Float result= maximum.maximumValue(3.3f,20.6f,1.1f);
         Assert.assertEquals((Float) 20.6f,result);
     }
+    
     @Test
-
     public void givenMaximumFloatNumber_WhenAtThirdPosition_ShouldReturnSameNumber() {
         Maximum maximum = new Maximum();
         Float result= maximum.maximumValue(3.3f,20.6f,40.1f);
         Assert.assertEquals((Float) 40.1f,result);
+    }
+
+    @Test
+    public void givenMaximumStringValue_WhenAtFirstPosition_ShouldReturnSameString() {
+        Maximum maximum = new Maximum();
+        String result=maximum.maximumValue("PLANE","CAR","BIKE");
+        Assert.assertEquals("PLANE",result);
+    }
+
+    @Test
+    public void givenMaximumStringValue_WhenAtSecondPosition_ShouldReturnSameString() {
+        Maximum maximum = new Maximum();
+        String result=maximum.maximumValue("BIKE","PLANE","CAR");
+        Assert.assertEquals("PLANE",result);
+    }
+    @Test
+    public void givenMaximumStringValue_WhenAtThirdPosition_ShouldReturnSameString() {
+        Maximum maximum = new Maximum();
+        String result=maximum.maximumValue("BIKE","CAR","PLANE");
+        Assert.assertEquals("PLANE",result);
     }
 }
