@@ -2,10 +2,9 @@ package com.bridgelabz.maximum.utility;
 
 import java.util.Arrays;
 
-public class Maximum <T extends Comparable > {
+public class Maximum<T extends Comparable> {
 
     private T[] arguments;
-    T[] array;
 
     public Maximum(T... arguments) {
         this.arguments = arguments;
@@ -17,10 +16,13 @@ public class Maximum <T extends Comparable > {
 
     public static <T extends Comparable> T maximumValue(T... arguments) {
         T maxValue;
-        int length;
         Arrays.sort(arguments);
-        length = arguments.length;
-        maxValue = arguments[length - 1];
+        maxValue = arguments[arguments.length - 1];
+        printMax(maxValue);
         return maxValue;
+    }
+
+    public static <T> void printMax(T maxValue) {
+        System.out.println("Maximum Value: " + maxValue);
     }
 }
