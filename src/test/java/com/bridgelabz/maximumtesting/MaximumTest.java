@@ -19,4 +19,11 @@ public class MaximumTest {
         Integer result = maximum.maximumValue(30, 40, 10);
         Assert.assertEquals((Integer) 40, result);
     }
+
+    @Test
+    public void givenMaximumNumber_WhenAThirdPosition_ShouldReturnSameNumber() {
+        Maximum maximum = new Maximum();
+        Integer result = maximum.maximumValue(30, 40, 50);
+        Assert.assertEquals((Integer) 50, result);
+    }
 }
