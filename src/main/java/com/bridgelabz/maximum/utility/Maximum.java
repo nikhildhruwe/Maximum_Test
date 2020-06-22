@@ -2,7 +2,7 @@ package com.bridgelabz.maximum.utility;
 
 import java.util.Arrays;
 
-public class Maximum<T> {
+public class Maximum<T extends Comparable<T>> {
 
     private final T[] arguments;
 
