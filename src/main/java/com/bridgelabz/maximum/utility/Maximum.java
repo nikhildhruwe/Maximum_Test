@@ -2,7 +2,7 @@ package com.bridgelabz.maximum.utility;
 
 import java.util.Arrays;
 
-public class Maximum<T extends Comparable> {
+public class Maximum<T> {
 
     private final T[] arguments;
 
@@ -16,7 +16,7 @@ public class Maximum<T extends Comparable> {
     }
 
     @SafeVarargs
-    public static <T extends Comparable> T maximumValue(T... arguments) {
+    public static <T> T maximumValue(T... arguments) {
         T maxValue;
         Arrays.sort(arguments);
         maxValue = arguments[arguments.length - 1];
